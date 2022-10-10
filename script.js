@@ -5,7 +5,7 @@ var questions = document.getElementById("instructions");
 
 //Defined objects for each question with keys (question,answer & correctanswer)
 const question1 = {
-    question:"Arrays in JavaScript can be used to store?",
+    question:"Arrays in JavaScript can be used to store ___________.",
     answers: {
         1: "Numbers and Strings",
         2: "Other Arrays",
@@ -48,6 +48,8 @@ const question4 = {
     correctAnswer: "3"
 };
 
+console.log(question2.question);
+
 //assigning code to the start quiz button
 startquiz.addEventListener("click",function() {
     startthetimer();
@@ -71,17 +73,26 @@ function startthetimer() {
 function forquestion1() {
     codingQuizchallenge = document.querySelector("#mainHeading");
     codingQuizchallenge.style.display = "none";
+    startquiz.style.display = "none";
     questions.textContent = question1.question;
     questions.style.display = "block";
+    questions.style.textAlign = "left";
+    questions.style.fontWeight = "bold";
+    questions.style.fontSize = "28px";
+    questions.style.marginLeft = "191px"
+    questions.style.marginTop = "83px"
     var answerlist1 = document.createElement("ol");
-        document.getElementById("quiz").appendChild(answerlist1);
-        for (i=0;i,i<5;i++) {
-            let li = document.createElement("button");
-            li.textContent = question1.answers[i];
-            li.style.display = "block";
-            li.style.margin = "20px";
-            li.setAttribute("type","button");
-            li.setAttribute("class","startquiz");
-            answerlist1.appendChild(li);
+    document.getElementById("quiz").appendChild(answerlist1);
+    for (i=1;i,i<5;i++) {
+        let li = document.createElement("button");
+        li.textContent = question1.answers[i];
+        li.setAttribute("type","button");
+        li.setAttribute("class","options");
+        li.setAttribute("id","options")
+        answerlist1.appendChild(li);
     };
+};
+
+function forquestion2(ev) {
+    console.log("this is working");
 };

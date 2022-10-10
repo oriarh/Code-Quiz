@@ -14,7 +14,7 @@ nav {
 }
 
 #quiz {
-
+    margin: auto;
 }
 
 h1 {
@@ -61,8 +61,30 @@ h1 {
     color: white;
 }
 
-#startquiz:hover {
+.startquiz:hover {
     background-color: rgb(245, 73, 245);
 }
 
+ol {
+    margin: 35px 170px 30px 170px;
+    text-align: center;
+    flex-wrap: wrap;
+    font-size: 20px;
+    font-weight:500;
+}
 
+.options {
+    margin: 20px;
+    display: block;
+    text-align: center;
+    padding: 8px 15px 8px 15px;
+    font-size: 18px;
+    background-color:  rgb(218, 5, 218);
+    border:none;
+    border-radius: 10px;
+    color: white;
+}
+
+.options:hover {
+    background-color: rgb(245, 73, 245);
+}
