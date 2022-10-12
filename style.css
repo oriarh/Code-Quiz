@@ -17,7 +17,7 @@ nav {
     margin: auto;
 }
 
-h1 {
+#mainHeading {
     margin: 80px 30px 30px 30px;
     display: flex;
     justify-content: center;
@@ -34,6 +34,16 @@ h1 {
     flex-wrap: wrap;
     font-size: 20px;
     font-weight:500;
+}
+
+.styleforquestions {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    font-size: 28px;
+    margin-left: 191px;
+    margin-top: 83px;
+    margin-right: 191px;
 }
 
 #result {
