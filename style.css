@@ -47,14 +47,14 @@ nav {
 }
 
 #result {
-    margin: 35px 170px 30px 170px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 20px 20px 20px 187px;
+    display: none;
     text-align: center;
-    flex-wrap: wrap;
-    font-size: 20px;
-    font-weight:500;
+    font-size: 25px;
+    border-top: 1px groove lightgray;
+    padding-top: 14px;
+    font-weight: 100;
+    color: gray;
 }
 
 .startquiz {
