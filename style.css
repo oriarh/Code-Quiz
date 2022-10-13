@@ -51,7 +51,7 @@ nav {
     display: none;
     text-align: center;
     font-size: 25px;
-    border-top: 1px groove lightgray;
+    border-top: 2px solid lightgray;
     padding-top: 14px;
     font-weight: 100;
     color: gray;

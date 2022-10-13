@@ -8,7 +8,9 @@ It contains MCQs and is timed.
 https://oriarh.github.io/Code-Quiz/
 
 ## Screenshot
-!["Image Screenshot"](./screeshot.png)
+!["Start Page"](./Images/MainPage.png)
+
+!["Question"](./Images/Question.png)
 
 ## Installation
 N/A

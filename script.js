@@ -5,6 +5,7 @@ const questions = document.getElementById("instructions");
 var globalQuestionCounter = 0;
 var result = document.getElementById("result");
 var scores = [];
+var changeQuestion = document.getElementById("quiz")
 
 //Defined objects for each question with keys (question, answer & correct answer)
 
@@ -71,11 +72,8 @@ startquiz.addEventListener("click", function () {
     forQuestions();
 });
 
-
-
 //Changes questions in a loop after the quiz has started
 //assigning code to the start quiz button
-var changeQuestion = document.getElementById("quiz")
 changeQuestion.addEventListener("click", function (event) {
     if (event.target.textContent === "Submit") {
         questions.textContent = "High Scores";
@@ -92,7 +90,7 @@ changeQuestion.addEventListener("click", function (event) {
         optionButtons.style.display = "block";
         optionButtons.style.marginLeft = "191px";
         optionButtons.style.marginTop = "20px";
-        document.getElementById("quiz").appendChild(optionButtons);
+        changeQuestion.appendChild(optionButtons);
 
         let Clearhighscores = document.createElement("button");
         Clearhighscores.textContent = "Clear high scores";
@@ -102,7 +100,7 @@ changeQuestion.addEventListener("click", function (event) {
         Clearhighscores.style.display = "inline";
         Clearhighscores.style.marginLeft = "191px";
         Clearhighscores.style.marginTop = "-1px ";
-        document.getElementById("quiz").appendChild(Clearhighscores);
+        changeQuestion.appendChild(Clearhighscores);
     }
     else if (event.target.textContent === "Go back") {
         document.getElementById("goBack").addEventListener("click",function(){
@@ -164,7 +162,7 @@ function forQuestions() {
         inputinitials.setAttribute("id","styleforquestions");
         inputinitials.setAttribute("placeholder","Enter initials Here")
         inputinitials.style.marginTop = "27px";
-        document.getElementById("quiz").appendChild(inputinitials);
+        changeQuestion.appendChild(inputinitials);
         inputinitials.setAttribute("class","styleforquestions");
         inputinitials.style.marginRight = "1px";
         inputinitials.style.display = "inline";
@@ -182,11 +180,11 @@ function forQuestions() {
             })
             localStorage.setItem("scores",JSON.stringify(scores));    
         });
-        document.getElementById("quiz").appendChild(optionButtons);
+        changeQuestion.appendChild(optionButtons);
         showhighscore();
         var endtime = document.getElementById("time");
         endtime.style.display = "none";
-
+        
     } else {
         codingQuizchallenge = document.querySelector("#mainHeading");
         codingQuizchallenge.style.display = "none";
@@ -199,7 +197,7 @@ function forQuestions() {
         // if there no existing OL element, then create one.
         if (answerList == null){
             answerList = document.createElement("ol");
-            document.getElementById("quiz").appendChild(answerList);
+            changeQuestion.appendChild(answerList);
             answerList.setAttribute("id", "ol");
 
         //if there is an existing OL, then remove its child (the option buttons for the previous question)
@@ -220,8 +218,8 @@ function forQuestions() {
     };
 };
 
+var highscore = countdowntimer.textContent;
 function showhighscore() {
-        var highscore = countdowntimer.textContent;
         var wronghighscore = startseconds;
         if (result.textContent != "Correct!") {
             questions.textContent = "Your high score is " + wronghighscore;
